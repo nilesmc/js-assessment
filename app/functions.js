@@ -11,7 +11,9 @@ exports.functionsAnswers = {
   },
 
   functionFunction: function(str) {
-
+    return function(arg) {
+      return str + ', ' + arg;
+    };
   },
 
   makeClosures: function(arr, fn) {
