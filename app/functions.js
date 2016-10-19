@@ -23,7 +23,13 @@ exports.functionsAnswers = {
   },
 
   useArguments: function() {
+    let sum = 0;
 
+    for (let i = 0, len = arguments.length; i < len; i++) {
+      sum += arguments[i];
+    }
+
+    return sum;
   },
 
   callIt: function(fn) {
