@@ -2,7 +2,7 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.arraysAnswers = {
   indexOf: function(arr, item) {
-    for (var i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
       if (arr[i] == item) {
         return i
       }
@@ -19,7 +19,7 @@ exports.arraysAnswers = {
   },
 
   remove: function(arr, item) {
-    for (var i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
       if (arr[i] === item) {
         arr.splice(i, 1);
         i--;
@@ -29,7 +29,7 @@ exports.arraysAnswers = {
   },
 
   removeWithoutCopy: function(arr, item) {
-    for (var i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
       if (arr[i] === item) {
         arr.splice(i, 1);
         i--;
@@ -78,9 +78,9 @@ exports.arraysAnswers = {
   },
 
   duplicates: function(arr) {
-    var count_obj = {}
-    var dups = []
-    for (var i = 0; i < arr.length; i++) {
+    let count_obj = {}
+    let dups = []
+    for (let i = 0; i < arr.length; i++) {
       if (count_obj[arr[i]]) {
         count_obj[arr[i]] += 1
       } else {
@@ -97,9 +97,9 @@ exports.arraysAnswers = {
   },
 
   square: function(arr) {
-    var squareds = [];
+    let squareds = [];
 
-    for (var i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
       squareds.push(arr[i] * arr[i]);
     }
 
@@ -108,8 +108,8 @@ exports.arraysAnswers = {
   },
 
   findAllOccurrences: function(arr, target) {
-    var indexes = [];
-    for (var i = 0; i < arr.length; i++) {
+    let indexes = [];
+    for (let i = 0; i < arr.length; i++) {
       if (arr[i] == target) {
         indexes.push(i)
       }
