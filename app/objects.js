@@ -14,7 +14,7 @@ exports.objectsAnswers = {
 
   iterate: function(obj) {
     let owned = [];
-    for (key in obj) {
+    for ( let key in obj) {
       if ( obj.hasOwnProperty(key) ) {
         owned.push(key + ': ' + obj[key]);
       }
