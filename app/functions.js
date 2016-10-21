@@ -11,13 +11,21 @@ exports.functionsAnswers = {
   },
 
   functionFunction: function(str) {
-    return function(arg) {
-      return str + ', ' + arg;
-    };
+    return arg => str + ', ' + arg;
   },
 
-  makeClosures: function(arr, fn) {
+  makeClosures: function(arr, func) {
+    var funcs = [];
 
+    let makeFunc = val => {
+      return () => { return func(val); };
+    };
+
+    for (let i = 0; i < arr.length; i++) {
+      funcs.push(makeFunc(arr[i]));
+    }
+
+    return funcs;
   },
 
   partial: function(fn, str1, str2) {
