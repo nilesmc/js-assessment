@@ -1,4 +1,6 @@
-exports = typeof window === 'undefined' ? global : window;
+'use strict';
+
+var exports = typeof window === 'undefined' ? global : window;
 
 exports.objectsAnswers = {
 

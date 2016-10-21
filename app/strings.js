@@ -1,10 +1,12 @@
-exports = typeof window === 'undefined' ? global : window;
+'use strict';
+
+var exports = typeof window === 'undefined' ? global : window;
 
 exports.stringsAnswers = {
   reduceString: function(str, amount) {
 
-    let countObj = {}
-    let output = []
+    let countObj = {};
+    let output = [];
     let arr = Array.from(str);
 
     for (let i = 0; i < arr.length; i++) {
@@ -12,17 +14,17 @@ exports.stringsAnswers = {
         countObj[arr[i]] = 0;
       }
       if (countObj[arr[i]]) {
-        countObj[arr[i]] += 1
+        countObj[arr[i]] += 1;
         if (countObj[arr[i]] <= amount) {
           output.push(arr[i]);
         }
       } else {
-        countObj[arr[i]] = 1
+        countObj[arr[i]] = 1;
         output.push(arr[i]);
       }
-    };
+    }
 
-    return output.join('')
+    return output.join('');
   },
 
   wordWrap: function(str, cols) {

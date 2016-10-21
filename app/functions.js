@@ -1,4 +1,6 @@
-exports = typeof window === 'undefined' ? global : window;
+'use strict';
+
+var exports = typeof window === 'undefined' ? global : window;
 
 exports.functionsAnswers = {
 
@@ -29,7 +31,7 @@ exports.functionsAnswers = {
   },
 
   partial: function(fn, str1, str2) {
-    return str3 => { return fn(str1, str2, str3); }
+    return str3 => { return fn(str1, str2, str3); };
   },
 
   useArguments: function() {
