@@ -19,13 +19,13 @@ exports.arraysAnswers = {
   },
 
   remove: function(arr, item) {
+    let new_arr = []
     for (let i = 0; i < arr.length; i++) {
-      if (arr[i] === item) {
-        arr.splice(i, 1);
-        i--;
+      if (arr[i] !== item) {
+        new_arr.push(arr[i]);
       }
     }
-    return arr;
+    return new_arr;
   },
 
   removeWithoutCopy: function(arr, item) {
