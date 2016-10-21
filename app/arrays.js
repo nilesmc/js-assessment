@@ -91,7 +91,7 @@ exports.arraysAnswers = {
       }
     }
 
-    for (key in count_obj) {
+    for (let key in count_obj) {
       if (count_obj[key] > 1) {
         dups.push(parseInt(key));
       }
