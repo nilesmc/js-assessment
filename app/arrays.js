@@ -1,25 +1,28 @@
-exports = typeof window === 'undefined' ? global : window;
+'use strict';
+
+var exports = typeof window === 'undefined' ? global : window;
+
 
 exports.arraysAnswers = {
   indexOf: function(arr, item) {
     for (let i = 0; i < arr.length; i++) {
       if (arr[i] == item) {
-        return i
+        return i;
       }
-    };
+    }
     return -1;
   },
 
   sum: function(arr) {
-    let sum = 0
+    let sum = 0;
     for (let i of arr) {
-      sum += i
+      sum += i;
     }
-    return sum
+    return sum;
   },
 
   remove: function(arr, item) {
-    let new_arr = []
+    let new_arr = [];
     for (let i = 0; i < arr.length; i++) {
       if (arr[i] !== item) {
         new_arr.push(arr[i]);
@@ -40,22 +43,22 @@ exports.arraysAnswers = {
 
   append: function(arr, item) {
     arr.push(item);
-    return arr
+    return arr;
   },
 
   truncate: function(arr) {
     arr.pop();
-    return arr
+    return arr;
   },
 
   prepend: function(arr, item) {
     arr.unshift(item);
-    return arr
+    return arr;
   },
 
   curtail: function(arr) {
     arr.shift();
-    return arr
+    return arr;
   },
 
   concat: function(arr1, arr2) {
@@ -64,32 +67,32 @@ exports.arraysAnswers = {
 
   insert: function(arr, item, index) {
     arr.splice(index, 0, item);
-    return arr
+    return arr;
   },
 
   count: function(arr, item) {
-    let counter = 0
+    let counter = 0;
     for (let i of arr) {
       if (item == i) {
-        counter += 1
+        counter += 1;
       }
     }
-    return counter
+    return counter;
   },
 
   duplicates: function(arr) {
-    let count_obj = {}
-    let dups = []
+    let count_obj = {};
+    let dups = [];
     for (let i = 0; i < arr.length; i++) {
       if (count_obj[arr[i]]) {
-        count_obj[arr[i]] += 1
+        count_obj[arr[i]] += 1;
       } else {
-        count_obj[arr[i]] = 1
+        count_obj[arr[i]] = 1;
       }
-    };
+    }
 
-    for (key in count_obj){
-      if (count_obj[key] > 1){
+    for (key in count_obj) {
+      if (count_obj[key] > 1) {
         dups.push(parseInt(key));
       }
     }
@@ -111,9 +114,9 @@ exports.arraysAnswers = {
     let indexes = [];
     for (let i = 0; i < arr.length; i++) {
       if (arr[i] == target) {
-        indexes.push(i)
+        indexes.push(i);
       }
-    };
-    return indexes
+    }
+    return indexes;
   }
 };
